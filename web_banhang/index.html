@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
 
-    <title>PAND STORE</title>
+    <title>DK-STORE</title>
 </head>
 <body id="particles-js">  
-    <div class="container">
+    <div class="container vienchinh">
         <div class="row" id="header">
             <div class="col-3" id="logo_1">
                 <a href="../web_banhang/index.html">
                     <div class="main">
                       <div class = "border_logo">
                         <div class = "inner-cutout"> 
-                          <h1 class="knockout">PAND STORE</h1>
+                          <h1 class="knockout">DK-STORE</h1>
                         </div>
                       </div>
                     </div>  
@@ -42,17 +42,17 @@
                     <div class="col-2"></div>
                     <div class="col-4"></div>
                     <div class="col-6 text-muted" style="text-align: center;" id="dangnhap">
-                        <a href="../web_banhang/user/index.html">
+                        <a href="../web_banhang/taikhoan/dangnhap.html">
                             <i class="far fa-user-circle" style="font-size: 22px;"></i>
-                            <label>ĐĂNG NHẬP</label>
+                            <label>TÀI KHOẢN</label>
                         </a>
                     </div>
                     
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12" id="menu">
+        <div class="row" id="nav1">
+            <div class="col-10" id="menu">
                 <nav class="navbar navbar-expand-sm navbar-dark">
                     <!-- Links -->
                     <ul class="navbar-nav">
@@ -61,16 +61,23 @@
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" style="color: chocolate;" href="#" id="navbardrop" data-toggle="dropdown">
-                          SẢN PHẨM
+                          LAPTOP
                         </a>
                         <div class="dropdown-menu menu_c2">
-                          <a class="dropdown-item" href="#">Link 1</a>
-                          <a class="dropdown-item" href="#">Link 2</a>
-                          <a class="dropdown-item" href="#">Link 3</a>
+                          <a class="dropdown-item" href="#">DELL</a>
+                          <a class="dropdown-item" href="#">LENOVO</a>
+                          <a class="dropdown-item" href="#">ASUS</a>
+                          <a class="dropdown-item" href="#">KHÁC</a>
                         </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" style="color: chocolate;" href="#">VỀ PAND</a>
+                        <a class="nav-link" style="color: chocolate;" href="#">PHỤ KIỆN</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" style="color: chocolate;" href="#">BLOG DK</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" style="color: chocolate;" href="#">VỀ DK</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" style="color: chocolate;" href="#">CỘNG ĐỒNG</a>
@@ -80,7 +87,12 @@
                     </ul>
                 </nav>
             </div>
-
+            <div class="col-2" id="giohang">
+              <a href="../web_banhang/chucnang/giohang.html">
+                  <i class="fa fa-shopping-cart" style="font-size: 18px;"></i>
+                  <label>Giỏ hàng</label>
+              </a>
+            </div>
         </div>
         <div class="row" id="banner_1">
           <div class="col-12" id="banner_2">
@@ -278,8 +290,30 @@
             </div>
         </div>
         </div>
-     
+        
     </div>
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
 </body>
 
 </html>
